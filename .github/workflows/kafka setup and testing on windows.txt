@@ -1,0 +1,43 @@
+kafka setup, running , creating topics, running produce, and consuming messages
+
+
+running zookeeper  
+command 
+zkserver
+
+running apache kafka
+
+command 
+
+> bin/kafka-server-start.bat config/server.properties
+
+create topic in kafka cluster
+
+kfka dirnam\bin\windows\kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+
+verify kafka topics
+
+
+> bin/kafka-topics.bat --list --bootstrap-server localhost:9092
+
+Send messages through producer 
+
+
+Run the producer and then type a few messages into the console to send to the server.
+
+
+> bin/kafka-console-producer.bat --broker-list localhost:9092 --topic test
+This is a message
+This is another message
+
+Start a consumer
+
+dipslay messages consumed by consumer as they are produced by producer.
+
+
+
+
+
+
+
+
